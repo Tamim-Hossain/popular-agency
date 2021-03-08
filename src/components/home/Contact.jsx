@@ -8,7 +8,7 @@ const Contact = () => {
 					<Col md={6} className="m-auto">
 						<h2 className="text-white">Let us handle your project, professionally.</h2>
 						<p className="mt-3 text-white">
-							With well written codes, we build amazing apps for all platforms, mobile and web apps in general.
+							With well written codes, we build amazing apps for all platforms, mobile and web applications in general.
 						</p>
 					</Col>
 					<Col md={6}>
