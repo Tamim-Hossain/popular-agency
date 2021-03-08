@@ -1,14 +1,18 @@
 import Contact from "./Contact";
+import Feedback from "./Feedback";
 import Main from "./Main";
-import Partner from "./Partner";
+import Partners from "./Partners";
+import Services from "./Services";
 import Works from "./Works";
 
 const Home = () => {
 	return (
 		<>
 			<Main />
-			<Partner />
+			<Partners />
+			<Services />
 			<Works />
+			<Feedback />
 			<Contact />
 		</>
 	);
