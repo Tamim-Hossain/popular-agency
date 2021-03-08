@@ -29,7 +29,7 @@ const Contact = () => {
 					</Col>
 				</Row>
 			</Container>
-			<p className="text-center text-white mt-5 pt-5">Copyright {new Date().getFullYear()}, All Rights Reserved.</p>
+			<p className="text-center text-white mt-5 pt-5">&#169;{new Date().getFullYear()}, All Rights Reserved.</p>
 		</div>
 	);
 };
