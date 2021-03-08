@@ -3,7 +3,7 @@ import { Button, Col, Container, Form, Row } from "react-bootstrap";
 const Contact = () => {
 	return (
 		<div className="bg-success pb-2 pt-5">
-			<Container>
+			<Container className="mt-5">
 				<Row>
 					<Col md={6} className="m-auto">
 						<h2 className="text-white">Let us handle your project, professionally.</h2>
