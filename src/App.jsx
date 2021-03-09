@@ -1,6 +1,8 @@
 import { createContext, useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Google from "./components/auth/Google";
+import Dashboard from "./components/dashboard/Dashboard";
+import Order from "./components/dashboard/Order";
 import Home from "./components/home/Home";
 
 export const UserContext = createContext();
@@ -18,6 +20,12 @@ const App = () => {
 				<Switch>
 					<Route exact path="/" component={Home} />
 					<Route path="/sign-in" component={Google} />
+					<Route path="/order/:title">
+						<Order />
+					</Route>
+					<Route path="/dashboard">
+						<Dashboard />
+					</Route>
 				</Switch>
 			</BrowserRouter>
 		</UserContext.Provider>

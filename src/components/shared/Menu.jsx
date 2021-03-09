@@ -35,12 +35,15 @@ const Menu = () => {
 			<Navbar.Toggle aria-controls="basic-navbar-nav" />
 			<Navbar.Collapse id="basic-navbar-nav">
 				<Nav className="ml-auto">
+					<Button as={Link} to="/dashboard/all" variant="warning" className="mr-3 font-weight-bold">
+						Dashboard
+					</Button>
 					{isSignedIn ? (
-						<Button variant="warning" as={Link} to="/" onClick={handleSignOut}>
+						<Button variant="warning" as={Link} to="/" onClick={handleSignOut} className="font-weight-bold">
 							Sign Out
 						</Button>
 					) : (
-						<Button variant="warning" as={Link} to="/sign-in">
+						<Button variant="warning" as={Link} to="/sign-in" className="font-weight-bold">
 							Sign In
 						</Button>
 					)}

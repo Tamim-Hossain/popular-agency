@@ -15,7 +15,7 @@ const Feedback = () => {
 			<h2 className="text-center font-weight-bold text-success mb-5">Clients Feedback</h2>
 			<Row>
 				{feedback.map((review) => (
-					<Col md={4}>
+					<Col key={review._id} md={4}>
 						<Card className="p-4">
 							<div className="d-flex justify-content-start">
 								<img className="w-25 img-fluid rounded-circle" src={review.userPhoto} alt="" />

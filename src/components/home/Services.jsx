@@ -23,7 +23,7 @@ const Services = () => {
 						key={service._id}
 						className="text-center text-decoration-none service-section p-5"
 						as={Link}
-						to="/somewhere"
+						to={`/order/${service.title.split(" ").join("-")}`}
 					>
 						<img className="img-fluid w-25 mb-3" src={`data:image/png;base64 ,${service.image.img}`} alt="" />
 						<h5>{service.title}</h5>
