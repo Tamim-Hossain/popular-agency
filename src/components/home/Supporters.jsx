@@ -5,7 +5,7 @@ import netflix from "../../images/netflix.png";
 import slack from "../../images/slack.png";
 import uber from "../../images/uber.png";
 
-const Partners = () => {
+const Supporters = () => {
 	const supporters = [
 		{
 			logo: slack,
@@ -34,4 +34,4 @@ const Partners = () => {
 	);
 };
 
-export default Partners;
+export default Supporters;

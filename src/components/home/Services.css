@@ -9,3 +9,7 @@
 	filter: grayscale(1);
 	padding-top: 3% !important;
 }
+.service-section:hover img {
+	transform: rotate(360deg);
+	transition: 0.7s;
+}

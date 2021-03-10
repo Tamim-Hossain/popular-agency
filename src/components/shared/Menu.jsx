@@ -28,7 +28,7 @@ const Menu = () => {
 	};
 
 	return (
-		<Navbar expand="lg" className="p-0">
+		<Navbar expand="md" className="p-0">
 			<Navbar.Brand as={Link} to="/">
 				<img style={logoStyle} src={logo} alt="" />
 			</Navbar.Brand>

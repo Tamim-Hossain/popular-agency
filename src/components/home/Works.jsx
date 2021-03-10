@@ -5,7 +5,6 @@ import imgOne from "../../images/carousel-1.png";
 import imgTwo from "../../images/carousel-2.png";
 import imgThree from "../../images/carousel-3.png";
 import imgFour from "../../images/carousel-4.png";
-import imgFive from "../../images/carousel-5.png";
 import "./Works.css";
 
 const Works = () => {
@@ -21,9 +20,6 @@ const Works = () => {
 		},
 		{
 			img: imgFour,
-		},
-		{
-			img: imgFive,
 		},
 	];
 
