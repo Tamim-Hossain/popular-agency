@@ -13,7 +13,7 @@ const AdminDashboard = () => {
 			<Row>
 				<Col md={3}>
 					<NavLink activeClassName="bg-light font-weight-bold" className="dropdown-item" to="/admin/orders">
-						My Orders
+						All Order
 					</NavLink>
 					<NavLink activeClassName="bg-light font-weight-bold" className="dropdown-item" to="/admin/service">
 						Add Service

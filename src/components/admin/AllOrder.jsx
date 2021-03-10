@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
-import { Button, Col, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
+import { RiDeleteBin5Fill } from "react-icons/ri";
 import swal from "sweetalert";
 import { UserContext } from "../../App";
 
@@ -30,22 +31,56 @@ const AllOrder = () => {
 	};
 
 	return (
-		<>
-			<h2 className="font-weight-bold text-success">Order list</h2>
-			<Row>
-				{orderList.map((order) => (
-					<Col md={6} className="p-2">
-						<div className="shadow rounded p-4" style={{ height: "200px" }}>
-							<h4>{order.title}</h4>
-							<p>{order.description}</p>
-							<Button variant="danger" className="float-right mt-4" onClick={() => handleDelete(order._id)}>
-								Delete
-							</Button>
-						</div>
+		<Row className="pb-5 pt-5 bg-light rounded">
+			<Col md={3}>
+				{" "}
+				<h5 className="text-center text-secondary font-weight-bold">NAME</h5>
+				<hr />
+			</Col>
+			<Col md={4}>
+				{" "}
+				<h5 className="text-center text-secondary font-weight-bold">EMAIL</h5>
+				<hr />
+			</Col>
+			<Col md={3}>
+				{" "}
+				<h5 className="text-center text-secondary font-weight-bold">PROJECT</h5>
+				<hr />
+			</Col>
+			<Col md={2}>
+				{" "}
+				<h5 className="text-center text-secondary font-weight-bold">ACTION</h5>
+				<hr />
+			</Col>
+			{orderList.length === 0 && (
+				<p className="font-weight-bold display-4" style={{ margin: "auto" }}>
+					No data found.
+				</p>
+			)}
+			{orderList.map((order, idx) => (
+				<>
+					<Col className="text-center font-weight-bold" md={3}>
+						<p>{order.name}</p> <hr style={{ width: "800px" }} />
 					</Col>
-				))}
-			</Row>
-		</>
+					<Col className="text-center font-weight-bold" md={4}>
+						<p>{order.email}</p>
+					</Col>
+					<Col className="text-center font-weight-bold" md={3}>
+						<p>{order.title}</p>
+					</Col>
+					<Col className="text-center font-weight-bold" md={2}>
+						<p
+							title="Delete Item"
+							onClick={() => handleDelete(order._id)}
+							className="text-danger"
+							style={{ cursor: "pointer" }}
+						>
+							<RiDeleteBin5Fill />
+						</p>
+					</Col>
+				</>
+			))}
+		</Row>
 	);
 };
 
