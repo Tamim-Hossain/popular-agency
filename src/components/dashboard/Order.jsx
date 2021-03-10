@@ -3,6 +3,7 @@ import { Button, Container, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useHistory, useParams } from "react-router";
 import { Link } from "react-router-dom";
+import swal from "sweetalert";
 import { UserContext } from "../../App";
 import logo from "../../images/logo.png";
 
@@ -24,9 +25,12 @@ const Order = () => {
 			})
 				.then((res) => res.json())
 				.then((result) => {
-					console.log(result);
-					alert("test");
+					swal({
+						title: "Order Confirmed!",
+						icon: "success",
+					});
 					e.target.reset();
+					history.push("/dashboard/all");
 				});
 		}
 	};
