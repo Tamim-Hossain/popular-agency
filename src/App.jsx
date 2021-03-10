@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import AdminDashboard from "./components/admin/AdminDashboard";
 import Google from "./components/auth/Google";
 import Dashboard from "./components/dashboard/Dashboard";
 import Order from "./components/dashboard/Order";
@@ -25,6 +26,9 @@ const App = () => {
 					</Route>
 					<Route path="/dashboard">
 						<Dashboard />
+					</Route>
+					<Route path="/admin">
+						<AdminDashboard />
 					</Route>
 				</Switch>
 			</BrowserRouter>

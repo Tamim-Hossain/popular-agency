@@ -3,13 +3,13 @@ import { Button, Col, Row } from "react-bootstrap";
 import swal from "sweetalert";
 import { UserContext } from "../../App";
 
-const OrderList = () => {
+const AllOrder = () => {
 	const [userInfo, setUserInfo] = useContext(UserContext);
 	const { email } = userInfo;
 	const [orderList, setOrderList] = useState([]);
 
 	useEffect(() => {
-		const URL = "https://popular-agency.herokuapp.com/specificOrder?email=" + email;
+		const URL = "https://popular-agency.herokuapp.com/orders";
 		fetch(URL)
 			.then((res) => res.json())
 			.then((data) => setOrderList(data));
@@ -49,4 +49,4 @@ const OrderList = () => {
 	);
 };
 
-export default OrderList;
+export default AllOrder;

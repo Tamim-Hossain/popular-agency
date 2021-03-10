@@ -12,15 +12,15 @@ const Dashboard = () => {
 			<Menu />
 			<Row>
 				<Col md={3}>
-					<NavLink activeClassName="bg-light font-weight-bold" className="dropdown-item" to="/dashboard/all">
-						All Orders
+					<NavLink activeClassName="bg-light font-weight-bold" className="dropdown-item" to="/dashboard/orders">
+						My Orders
 					</NavLink>
 					<NavLink activeClassName="bg-light font-weight-bold" className="dropdown-item" to="/dashboard/feedback">
-						Add Feedback
+						Feedback
 					</NavLink>
 				</Col>
 				<Col md={9}>
-					{pathname === "/dashboard/all" && <OrderList />}
+					{pathname === "/dashboard/orders" && <OrderList />}
 					{pathname === "/dashboard/feedback" && <AddFeedback />}
 				</Col>
 			</Row>
