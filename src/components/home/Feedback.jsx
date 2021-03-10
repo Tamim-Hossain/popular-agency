@@ -16,12 +16,12 @@ const Feedback = () => {
 			<Row>
 				{feedback.map((review) => (
 					<Col key={review._id} md={4}>
-						<Card className="p-4">
+						<Card className="p-4 m-2">
 							<div className="d-flex justify-content-start">
 								<img className="w-25 img-fluid rounded-circle" src={review.userPhoto} alt="" />
 								<div className="ml-4">
-									<h3>{review.name}</h3>
-									<h5>{review.company}</h5>
+									<h4>{review.name}</h4>
+									<h5>{review.position}</h5>
 								</div>
 							</div>
 							<p className="text-secondary mt-3">{review.description}</p>
