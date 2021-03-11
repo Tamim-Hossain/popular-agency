@@ -25,7 +25,7 @@ const AddFeedback = () => {
 				.then((result) => {
 					e.target.reset();
 					swal({
-						title: "Review posted. Check home page now!",
+						title: "Review posted. Check feedback section now!",
 						icon: "success",
 					});
 					history.push("/");

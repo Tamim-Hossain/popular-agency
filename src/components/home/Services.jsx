@@ -26,7 +26,7 @@ const Services = () => {
 					<Loader type="Oval" color="#1cc7c1" height={120} width={120} />
 				</div>
 			) : (
-				<Row>
+				<Row className="d-flex justify-content-around">
 					{services.map((service) => (
 						<Col
 							md={4}

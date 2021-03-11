@@ -24,7 +24,7 @@ const Feedback = () => {
 					<Loader type="Oval" color="#1cc7c1" height={120} width={120} />
 				</div>
 			) : (
-				<Row>
+				<Row className="d-flex justify-content-around">
 					{feedback.map((review) => (
 						<Col key={review._id} md={4}>
 							<Card className="p-4 m-2">
@@ -35,7 +35,7 @@ const Feedback = () => {
 										<h5>{review.position}</h5>
 									</div>
 								</div>
-								<p className="text-secondary mt-3">{review.description}</p>
+								<p className="text-secondary mt-3">{review.description.slice(0, 250)}</p>
 							</Card>
 						</Col>
 					))}
