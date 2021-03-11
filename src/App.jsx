@@ -2,6 +2,7 @@ import { createContext, useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import AdminDashboard from "./components/admin/AdminDashboard";
 import Google from "./components/auth/Google";
+import PrivateRoute from "./components/auth/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
 import Order from "./components/dashboard/Order";
 import Home from "./components/home/Home";
@@ -15,21 +16,22 @@ const App = () => {
 		email: "",
 		userPhoto: "",
 	});
+
 	return (
 		<UserContext.Provider value={[userInfo, setUserInfo]}>
 			<BrowserRouter>
 				<Switch>
 					<Route exact path="/" component={Home} />
 					<Route path="/sign-in" component={Google} />
-					<Route path="/order/:title">
+					<PrivateRoute path="/order/:title">
 						<Order />
-					</Route>
-					<Route path="/dashboard">
+					</PrivateRoute>
+					<PrivateRoute path="/dashboard">
 						<Dashboard />
-					</Route>
-					<Route path="/admin">
+					</PrivateRoute>
+					<PrivateRoute path="/admin">
 						<AdminDashboard />
-					</Route>
+					</PrivateRoute>
 				</Switch>
 			</BrowserRouter>
 		</UserContext.Provider>

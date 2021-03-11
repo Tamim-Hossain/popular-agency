@@ -11,7 +11,7 @@ const Dashboard = () => {
 		<Container>
 			<Menu />
 			<Row>
-				<Col md={3}>
+				<Col md={3} className="mt-2">
 					<NavLink activeClassName="bg-light font-weight-bold" className="dropdown-item" to="/dashboard/orders">
 						My Orders
 					</NavLink>

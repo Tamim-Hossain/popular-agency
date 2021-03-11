@@ -5,7 +5,7 @@ import { useHistory, useParams } from "react-router";
 import { Link } from "react-router-dom";
 import swal from "sweetalert";
 import { UserContext } from "../../App";
-import logo from "../../images/logo.png";
+import Menu from "../shared/Menu";
 
 const Order = () => {
 	const [userInfo] = useContext(UserContext);
@@ -30,29 +30,25 @@ const Order = () => {
 						icon: "success",
 					});
 					e.target.reset();
-					history.push("/dashboard/all");
+					history.push("/dashboard/orders");
 				});
 		}
 	};
 
-	const logoStyle = {
-		height: "130px",
-		width: "150px",
-	};
-
 	return (
 		<Container>
-			<Link to="/" style={logoStyle} className="d-flex justify-content-center m-auto">
-				<img src={logo} alt="" className="img-fluid" />
-			</Link>
-			<Form onSubmit={handleSubmit(handleOrder)} className="w-50 m-auto">
+			<Menu />
+			<h2 className="text-center font-weight-bold text-info">Preview Order</h2>
+			<Form onSubmit={handleSubmit(handleOrder)} className="w-50 m-auto pt-5">
 				<Form.Group controlId="name">
 					<Form.Control
 						placeholder="Name / company's name"
 						ref={register({ required: true })}
 						name="name"
 						defaultValue={name}
-					/>
+						className={errors.name && "border-danger"}
+					/>{" "}
+					{errors.name && <span className="text-danger">Name is required.</span>}
 				</Form.Group>
 
 				<Form.Group controlId="email">
@@ -62,7 +58,9 @@ const Order = () => {
 						ref={register({ required: true })}
 						name="email"
 						defaultValue={email}
-					/>
+						className={errors.email && "border-danger"}
+					/>{" "}
+					{errors.email && <span className="text-danger">Email is required.</span>}
 				</Form.Group>
 
 				<Form.Group controlId="title">
@@ -71,7 +69,9 @@ const Order = () => {
 						ref={register({ required: true })}
 						name="title"
 						defaultValue={title.split("-").join(" ")}
-					/>
+						className={errors.title && "border-danger"}
+					/>{" "}
+					{errors.title && <span className="text-danger">Title is required.</span>}
 				</Form.Group>
 
 				<Form.Group controlId="description">
@@ -80,8 +80,10 @@ const Order = () => {
 						rows={4}
 						placeholder="Project Details.."
 						ref={register({ required: true })}
+						className={errors.description && "border-danger"}
 						name="description"
-					/>
+					/>{" "}
+					{errors.description && <span className="text-danger">Description is required.</span>}
 				</Form.Group>
 				<Button type="submit" variant="success">
 					Confirm Order

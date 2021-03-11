@@ -35,7 +35,7 @@ const Feedback = () => {
 										<h5>{review.position}</h5>
 									</div>
 								</div>
-								<p className="text-secondary mt-3">{review.description}</p>
+								<p className="text-secondary mt-3">{review.description.slice(0, 200)} ...</p>
 							</Card>
 						</Col>
 					))}

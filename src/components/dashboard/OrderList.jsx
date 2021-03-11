@@ -4,7 +4,7 @@ import swal from "sweetalert";
 import { UserContext } from "../../App";
 
 const OrderList = () => {
-	const [userInfo, setUserInfo] = useContext(UserContext);
+	const [userInfo] = useContext(UserContext);
 	const { email } = userInfo;
 	const [orderList, setOrderList] = useState([]);
 
@@ -31,7 +31,7 @@ const OrderList = () => {
 
 	return (
 		<>
-			<h2 className="font-weight-bold text-success">Order list</h2>
+			<h2 className="font-weight-bold text-info">Order list</h2>
 			<Row>
 				{orderList.map((order) => (
 					<Col md={6} className="p-2">
