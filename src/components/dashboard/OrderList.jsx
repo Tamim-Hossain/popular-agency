@@ -43,6 +43,11 @@ const OrderList = () => {
 				</div>
 			) : (
 				<Row>
+					{orderList.length === 0 && (
+						<p className="font-weight-bold" style={{ margin: "auto", fontSize: "2.5rem" }}>
+							No data found.
+						</p>
+					)}
 					{orderList.map((order) => (
 						<Col md={6} className="p-2">
 							<div className="shadow rounded p-4" style={{ height: "200px" }}>
