@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Contact from "./Contact";
 import Feedback from "./Feedback";
 import Main from "./Main";
@@ -8,6 +9,9 @@ import Works from "./Works";
 const Home = () => {
 	return (
 		<>
+			<Helmet>
+				<title>Home | Popular Agency</title>
+			</Helmet>
 			<Main />
 			<Supporters />
 			<Services />

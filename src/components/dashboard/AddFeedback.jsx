@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Button, Form } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router";
 import swal from "sweetalert";
@@ -35,6 +36,9 @@ const AddFeedback = () => {
 
 	return (
 		<>
+			<Helmet>
+				<title>Add Feedback | Popular Agency</title>
+			</Helmet>
 			<h2 className="text-info font-weight-bold">Add Review</h2>
 			<Form onSubmit={handleSubmit(handleFeedback)} className="w-75">
 				<Form.Group>

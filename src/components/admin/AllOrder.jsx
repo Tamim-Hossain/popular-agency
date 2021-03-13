@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 import Loader from "react-loader-spinner";
 import swal from "sweetalert";
@@ -36,7 +37,10 @@ const AllOrder = () => {
 
 	return (
 		<>
-			<h2 className="font-weight-bold text-info text-center">All Order</h2>
+			<Helmet>
+				<title>All Orders | Popular Agency</title>
+			</Helmet>
+			<h2 className="font-weight-bold text-info text-center">All Orders</h2>
 			{loading ? (
 				<div className="m-5 d-flex justify-content-center">
 					<Loader type="Oval" color="#1cc7c1" height={120} width={120} />

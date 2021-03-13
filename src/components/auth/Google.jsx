@@ -2,6 +2,7 @@ import firebase from "firebase/app";
 import "firebase/auth";
 import { useContext } from "react";
 import { Button, Container } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 import { FcGoogle } from "react-icons/fc";
 import { useHistory, useLocation } from "react-router";
 import { Link } from "react-router-dom";
@@ -46,8 +47,12 @@ const Google = () => {
 		height: "130px",
 		width: "150px",
 	};
+
 	return (
 		<Container>
+			<Helmet>
+				<title>Sign In | Popular Agency</title>
+			</Helmet>
 			<Link to="/" style={logoStyle} className="d-flex justify-content-center m-auto">
 				<img src={logo} alt="" className="img-fluid" />
 			</Link>

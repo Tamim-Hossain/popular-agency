@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Button, Container, Form } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 import { useForm } from "react-hook-form";
 import { useHistory, useParams } from "react-router";
 import { Link } from "react-router-dom";
@@ -37,6 +38,9 @@ const Order = () => {
 
 	return (
 		<Container>
+			<Helmet>
+				<title>Preview Order | Popular Agency</title>
+			</Helmet>
 			<Menu />
 			<h2 className="text-center font-weight-bold text-info">Preview Order</h2>
 			<Form onSubmit={handleSubmit(handleOrder)} className="w-50 m-auto pt-5">

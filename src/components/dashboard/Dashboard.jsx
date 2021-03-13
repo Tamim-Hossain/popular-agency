@@ -16,7 +16,7 @@ const Dashboard = () => {
 						My Orders
 					</NavLink>
 					<NavLink activeClassName="bg-light font-weight-bold" className="dropdown-item" to="/dashboard/feedback">
-						Feedback
+						Add Feedback
 					</NavLink>
 				</Col>
 				<Col md={9}>

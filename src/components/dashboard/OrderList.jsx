@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { Button, Col, Row } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 import Loader from "react-loader-spinner";
 import swal from "sweetalert";
 import { UserContext } from "../../App";
@@ -36,6 +37,9 @@ const OrderList = () => {
 
 	return (
 		<>
+			<Helmet>
+				<title>My Orders | Popular Agency</title>
+			</Helmet>
 			<h2 className="font-weight-bold text-info">Order list</h2>
 			{loading ? (
 				<div className="m-5 d-flex justify-content-center">

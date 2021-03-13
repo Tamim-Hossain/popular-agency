@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 import { useForm } from "react-hook-form";
 import swal from "sweetalert";
 
@@ -37,6 +38,9 @@ const AddService = () => {
 
 	return (
 		<div className="ml-4">
+			<Helmet>
+				<title>Add Service | Popular Agency</title>
+			</Helmet>
 			<h2 className="mb-4 font-weight-bold text-info">Add Service</h2>
 			<Form onSubmit={handleSubmit(handleService)} className="w-75">
 				<Form.Group controlId="title">
